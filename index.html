@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuesta Zaca-Coco</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="LogoCartasP.png" alt="Logo">
+                <h1 class="logo">Bienvenido a Zaca-Coco </h1>
+                <img src="LogoCartasP.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                 <div class="logo-container">
+                    <img src="yape.png" alt="Logo">
+                 </div>
+                 <div class="logo-container">
+                    <img src="bco.png" alt="Logo">
+                 </div>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+        <div class="card left">
+            <h2>Formulario de Apuestas</h2>
+            <form id="betForm">
+                <label for="name">Nombre del jugador:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="amount">Monto en juego:</label>
+                <input type="number" id="amount" name="amount" required><br><br>
+                
+                <button type="submit">Aceptar</button>
+            </form>
+            
+            <h3>Hola que tal te saludo Homme_Hopper si quieres ganarte alguito juega 
+                Zaca-Coco donde podrás ganar: 
+                <ul>
+                    <li>Recarguitas de 5 lucas al operador que tu quieras.</li>
+                    <li>Puedes ganarte una luca.</li>
+                    <li>El doble que apostaste.</li>
+                    <li>Devolver lo que apostaste.</li>
+                    <li>En el peor de los casos no ganas nada.</li>
+                    <li>Hablame --- +51 907 698 346 ----.</li>
+                    <li>Todo eso por Yape y bcp </li>
+                </ul>
+            </h3>
+        </div>
+        
+        
+        <div class="card center">
+            <h2>Tarjeta Central</h2>
+            <div class="grid-container">
+                <!-- Aquí van las cartas -->
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                 <h3>1</h3>
+                </div>
+
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                    <h3>2</h3>
+                </div>
+                
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                 <h3>3</h3>
+                </div>
+
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                    <h3>4</h3>
+                </div>
+
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                 <h3>5</h3>
+                </div>
+
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                    <h3>6</h3>
+                </div>
+
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                 <h3>7</h3>
+                </div>
+
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                    <h3>8</h3>
+                </div>
+
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                 <h3>9</h3>
+                </div>
+
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                    <h3>10</h3>
+                </div>
+
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                 <h3>11</h3>
+                </div>
+
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                    <h3>12</h3>
+                </div>
+
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                 <h3>13</h3>
+                </div>
+
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                    <h3>14</h3>
+                </div>
+
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                 <h3>15</h3>
+                </div>
+
+                <div class="card naipes">
+                    <div class="card-image" style="background-image: url('OIG3.jnY5LdCfvooi.jpg');"></div>
+                    <h3>16</h3>
+                </div>
+
+            </div>
+            
+            <button id="jugarBtn">Jugar</button>
+        </div>
+
+        <div class="card right">
+            <h2>Tabla de Datos</h2>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Monto</th>
+                        <th>Se debe </th>
+                        <th>Falta Cancelar</th>
+                        <th>Cancelado</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se llenarán dinámicamente los datos -->
+                </tbody>
+            </table>
+        </div>
+        <script src="scripts.js" defer></script>
+    </main>
+</body>
+</html>

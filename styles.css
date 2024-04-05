@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #e0b31f;
+    color: #fff;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+
+
+.left {
+    order: 1;
+}
+
+.center {
+    order: 2;
+}
+
+.right {
+    order: 3;
+}
+.card {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(219, 189, 20, 0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card.left {
+    padding: 20px;
+}
+
+.card.left form {
+    display: flex;
+    flex-direction: column;
+}
+
+.card.left label {
+    margin-bottom: 5px;
+}
+
+.card.left button {
+    margin-top: 1px;
+    padding: 10px 20px;
+    background-color: #e0b31f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card.left button:hover {
+    background-color: #48b300;
+}
+
+.card.right {
+    padding: 20px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+.card.naipes {
+    background-color: #fff;
+    border: 1px solid #000;
+    width: 45px; /* Anchura de las cartas */
+    height: 105px; /* Altura de las cartas */
+}
+
+
+.card.naipes:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.card.naipes:after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    right: 10px;
+    bottom: 30px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    z-index: -2;
+}
+
+.card.naipes h2 {
+    margin-top: 0;
+    z-index: 1;
+}
+
+.card.naipes .card-image {
+    width: 105%;
+    height: 75%;
+    background-size: cover;
+    background-position: center;
+}
+
+#jugarBtn {
+    padding: 15px 50px;
+    background-color: #e0b31f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+#jugarBtn:hover {
+    background-color: #48b300;
+}
+
+.card.left input[type="text"],
+.card.left input[type="number"] {
+    width: 200px; /* Ajusta el ancho según tus preferencias */
+    margin: 0 auto; /* Centra horizontalmente */
+    display: block; /* Asegura que se muestren como bloques para aplicar el margen auto */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 100px; /* ajusta el tamaño según lo necesites */
+    margin-right: 10px; /* ajusta el espacio entre el logo y el texto según lo necesites */
+}
+
+.card-naipes {
+    animation: shuffle 2s ease;
+}
+
+@keyframes shuffle {
+    0% {
+        transform: translateY(150) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+    }
+}
+
+.card.naipes.shuffling {
+    animation: shuffle 5s ease;
+}
+ 
