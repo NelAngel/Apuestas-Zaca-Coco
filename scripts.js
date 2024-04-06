@@ -94,12 +94,24 @@ function mostrarMensajeElección() {
 
 // Definir los premios de las cartas
 const premios = [
-    {id: 1, nombre: "Recarguitas de 5 lucas al operador que tu quieras."},
-    {id: 2, nombre: "Puedes ganarte una luca."},
-    {id: 3, nombre: "El doble que apostaste."},
-    {id: 4, nombre: "Devolver lo que apostaste."},
-    {id: 5, nombre: "Perdiste Pe causa Gaaaa."}
+    {id: 1, nombre: "Perdiste"},
+    {id: 2, nombre: "Perdiste"},
+    {id: 3, nombre: "Perdiste"},
+    {id: 4, nombre: "Perdiste"},
+    {id: 5, nombre: "Perdiste"},
+    {id: 6, nombre: "Perdiste"},
+    {id: 7, nombre: "Perdiste"},
+    {id: 8, nombre: "Recarguita de 5 soles"},
+    {id: 9, nombre: "Recarguita de 1 sol"},
+    {id: 10, nombre: "Recarguita de 1 sol"},
+    {id: 11, nombre: "Recarguita de 1 sol"},
+    {id: 12, nombre: "1 + sol"},
+    {id: 13, nombre: "1 + sol"},
+    {id: 14, nombre: "1 + sol"},
+    {id: 15, nombre: "Premio doble"},
+    {id: 16, nombre: "Premio doble"}
 ];
+
 
 // Función para mostrar el premio de la carta seleccionada
 function mostrarEfectoSeleccionado() {
@@ -111,27 +123,27 @@ function mostrarEfectoSeleccionado() {
 
     // Mostrar el premio seleccionado al jugador
     alert("Has ganado: " + premioSeleccionado);
+    
+    premioMostrado = true; // Establecer premioMostrado en true para evitar que se seleccione más cartas
 }
+let premioMostrado = false;
 
 // Función para habilitar la selección de carta
 function habilitarSeleccionCarta() {
     const cartas = document.querySelectorAll('.card.naipes');
     cartas.forEach(carta => {
         carta.addEventListener('click', function() {
-            seleccionarCarta(carta);
-        });
+            if (!premioMostrado) { // Verificar si el premio aún no se ha mostrado
+                seleccionarCarta(carta);
+            }
+        }, { once: true });
     });
 }
-
 // Función para manejar la selección de carta
 function seleccionarCarta(carta) {
-    carta.removeEventListener('click', function() {
-        seleccionarCarta(carta);
-    });
     console.log("Carta seleccionada");
     mostrarEfectoSeleccionado();
 }
-
 
 // Agregar evento de clic al botón "Jugar" para activar la animación de mezcla en las cartas dentro del contenedor .center
 jugarBtn.addEventListener('click', function() {
