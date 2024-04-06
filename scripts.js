@@ -63,8 +63,81 @@ function shuffleCenterCards() {
     });
 }
 
+// Función para mostrar el mensaje de elección de carta en el centro de la pantalla
+function mostrarMensajeElección() {
+    // Crear un div para el mensaje
+    const mensajeDiv = document.createElement('div');
+    mensajeDiv.textContent = "¡Elige una carta para revelar su efecto!";
+    mensajeDiv.style.position = 'fixed';
+    mensajeDiv.style.top = '50%';
+    mensajeDiv.style.left = '50%';
+    mensajeDiv.style.transform = 'translate(-50%, -50%)';
+    mensajeDiv.style.backgroundColor = '#ffd700'; // Color de fondo amarillo dorado
+    mensajeDiv.style.color = '#ffffff'; // Texto blanco
+    mensajeDiv.style.padding = '30px'; // Aumentar el relleno
+    mensajeDiv.style.border = '4px solid #000000'; // Borde grueso negro
+    mensajeDiv.style.borderRadius = '10px'; // Bordes redondeados
+    mensajeDiv.style.fontSize = '24px'; // Tamaño del texto grande
+    mensajeDiv.style.fontWeight = 'bold'; // Texto en negrita
+    mensajeDiv.style.textAlign = 'center'; // Alineación del texto al centro
+    mensajeDiv.style.zIndex = '9999';
+    
+    // Agregar el mensaje al body del documento
+    document.body.appendChild(mensajeDiv);
+
+    // Programar la eliminación del mensaje después de 3 segundos
+    setTimeout(function() {
+        mensajeDiv.remove(); // Eliminar el mensaje
+        habilitarSeleccionCarta(); // Habilitar la selección de carta después de que desaparezca el mensaje
+    }, 3000);
+}
+
+// Definir los premios de las cartas
+const premios = [
+    {id: 1, nombre: "Recarguitas de 5 lucas al operador que tu quieras."},
+    {id: 2, nombre: "Puedes ganarte una luca."},
+    {id: 3, nombre: "El doble que apostaste."},
+    {id: 4, nombre: "Devolver lo que apostaste."},
+    {id: 5, nombre: "Perdiste Pe causa Gaaaa."}
+];
+
+// Función para mostrar el premio de la carta seleccionada
+function mostrarEfectoSeleccionado() {
+    // Obtener un índice aleatorio dentro del rango de premios
+    const premioIndex = Math.floor(Math.random() * premios.length);
+    
+    // Obtener el premio correspondiente al índice aleatorio
+    const premioSeleccionado = premios[premioIndex].nombre;
+
+    // Mostrar el premio seleccionado al jugador
+    alert("Has ganado: " + premioSeleccionado);
+}
+
+// Función para habilitar la selección de carta
+function habilitarSeleccionCarta() {
+    const cartas = document.querySelectorAll('.card.naipes');
+    cartas.forEach(carta => {
+        carta.addEventListener('click', function() {
+            seleccionarCarta(carta);
+        });
+    });
+}
+
+// Función para manejar la selección de carta
+function seleccionarCarta(carta) {
+    carta.removeEventListener('click', function() {
+        seleccionarCarta(carta);
+    });
+    console.log("Carta seleccionada");
+    mostrarEfectoSeleccionado();
+}
+
+
 // Agregar evento de clic al botón "Jugar" para activar la animación de mezcla en las cartas dentro del contenedor .center
 jugarBtn.addEventListener('click', function() {
     // Después de un pequeño retraso, activar la animación de mezcla en las cartas dentro del contenedor .center
     setTimeout(shuffleCenterCards, 100);
+
+    // Después de completar la animación de mezcla y movimiento de las cartas, mostrar el mensaje de elección
+    setTimeout(mostrarMensajeElección, 6000); // Ajusta el tiempo según la duración de tu animación
 });
