@@ -233,3 +233,35 @@ th {
     animation: shuffle 5s ease;
 }
  
+/* Agrega estos estilos al final de tu archivo styles.css */
+
+.light-button {
+    background-color: #ff3333; /* Rojo */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dark-button {
+    background-color: #33cc33; /* Verde */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.limpiar-button {
+    background-color: red; /* Cambiar el color de fondo a rojo */
+    color: white; /* Cambiar el color del texto a blanco */
+    padding: 10px 20px; /* Ajustar el espaciado interno */
+    border: none; /* Eliminar el borde */
+    border-radius: 5px; /* Agregar bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Agregar transición suave al cambiar el color de fondo */
+}
+
+.limpiar-button:hover {
+    background-color: darkred; /* Cambiar el color de fondo a rojo oscuro al pasar el cursor sobre el botón */
+}
