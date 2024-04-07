@@ -265,3 +265,33 @@ th {
 .limpiar-button:hover {
     background-color: darkred; /* Cambiar el color de fondo a rojo oscuro al pasar el cursor sobre el botón */
 }
+
+/* Estilos generales de la tabla */
+#data-table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#data-table td, #data-table th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+#data-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #66cf29;
+    color: black;
+}
+
+/* Estilo para las filas en estado "Pagado" */
+tr.pagado {
+    background-color: #232925; /* Verde claro */
+}
+
+/* Estilo para las filas en estado "Falta Cancelar" */
+tr.falta-cancelar {
+    background-color: #b6212d; /* Rojo claro */
+}
